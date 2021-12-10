@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_search_marvel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:text="@string/lbl_search_marvel"
+            android:textColor="#D42026"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbl_frontend_test"
+            android:textColor="#D42026"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/lbl_search_marvel"
+            app:layout_constraintTop_toTopOf="@+id/lbl_search_marvel" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="52dp"
+            android:layout_height="2dp"
+            android:background="#D42026"
+            app:layout_constraintStart_toStartOf="@id/lbl_search_marvel"
+            app:layout_constraintTop_toBottomOf="@id/lbl_search_marvel" />
+
+        <TextView
+            android:id="@+id/lbl_character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lbl_character_name"
+            android:textColor="#D42026"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/v_line"
+            app:layout_constraintTop_toBottomOf="@+id/v_line" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/edit_shape"
+            android:inputType="text"
+            android:queryHint="Pesquise personagem"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lbl_character_name"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_character_name"
+            tools:ignore="Autofill,LabelFor" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#D42026">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp"
+            android:layout_marginStart="75dp"
+            android:text="@string/lbl_name"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_characters"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_character" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D42026" />
+
+    <include layout="@layout/layout_page" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="#D42026" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

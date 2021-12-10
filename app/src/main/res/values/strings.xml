@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ApiMarvel</string>
+    <string name="character_image">Imagem Personagem</string>
+    <string name="lbl_name">Nome</string>
+    <string name="lbl_search_marvel">BUSCA MARVEL</string>
+    <string name="lbl_frontend_test">TESTE FRONT-END</string>
+    <string name="lbl_character_name">Nome do Personagem</string>
+    <string name="lbl_description">Descrição:</string>
+</resources>
